@@ -11,10 +11,7 @@
     body {
       font-family: Arial, sans-serif;
       background-color: #f2f2f2;
-      background-image: url("horse4.jpg");
-      background-repeat: no-repeat;
-      background-attachment: fixed;  
-      background-size: cover;
+
 
     }
     
@@ -70,41 +67,35 @@
       text-decoration: none;
     }
   </style>
+  <script>
+     function login() {
+      
+  }
+  </script>
   
 </head>
 <body>
-    <div class="w3-top">
-        <div class="w3-bar w3-blue w3-card">
-          <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-          <a href="Dashboard.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
-          <a href="#m" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Map</a>
-          <a href="#a" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Announcements</a>
-          <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Contact</a>
-          <div class="w3-dropdown-hover w3-hide-small ">
-            <button class="w3-padding-large w3-button" title="Menu"> Menu <i class="fa fa-caret-down"></i></button>     
-            <div class="w3-dropdown-content w3-bar-block w3-card-4">
-              <a href="Login.html" class="w3-bar-item w3-button">Login</a>
-              <a href="Signup.html" class="w3-bar-item w3-button">Signup</a>
-            </div>
-          </div>
-          <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
-        </div>
-      </div>
-    
+      <br><br><br>
   <div class="container">
     <h2>Login</h2>
-    <form>
+    <form action="announcements.html">
       <label for="username">Username:</label>
       <input type="text" id="username" name="username" required>
       
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" required>
       
-      <button type="submit">Login</button>
+        <button type="submit">Login</button>
+      
     </form>
     <div class="signup-link">
       <p>If you don't have an account, <a href="signup.html">sign up here</a>.</p>
     </div>
   </div>
+  <script>
+    function login(){
+      window.location.href="details.html";
+    }
+  </script>
 </body>
 </html>

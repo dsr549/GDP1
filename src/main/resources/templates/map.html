@@ -96,6 +96,54 @@
     th {
       background-color: #f2f2f2;
     }
+     #container {
+        display: flex;
+        margin-left:20px;
+        margin-right:20px;
+      }
+    
+      #m {
+        width: 821px;
+        height: 633px;
+        right: 5%;
+        background: green;
+        top: -10px;
+        right: 0px;
+        
+
+      }
+  .select {
+    width: 221px;
+    height: 33px;
+    float: right;
+  }  
+      
+.column {
+  float: left;
+  width: 60%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.small-box {
+    position: absolute;
+    top: 300px;
+    left: 50px;
+    width: 150px;
+    height: 130px;
+    background: rgb(239, 229, 229);
+    opacity: 30px;
+}
+.box {
+    width: 20px;
+    height: 20px;
+    background: blue;
+    margin-right: 10px;
+  }
   </style>
 
 </head>
@@ -163,9 +211,398 @@
       </div>
     </div>
   </div>
-<div>
-  <h2>This page will be developed in the future </h2>
-</div>
+<div class="row">
+      <div id="container" >
+      <table>
+    <tr>
+      <th><div id="m" ></div></th>
+      <th> <div class="box" style="right: 50%; bottom: 0%;left: 50%; height: 650px; width: 600px; background-color: aliceblue;border: solid;" ></div></th>
+    </tr>
+       
+    </table>
+      <div class="small-box" style="fill-opacity: initial;">
+      <table>
+      <tr>
+      <th> <div class="box" style="background-color: rgb(249, 229, 10);"></div></th>
+      <th><p>Region 1</p></th>
+    </tr>
+    <tr>
+    <th> <div class="box" style="background-color: rgb(31, 243, 12);"></div></th>
+      <th><p>Region 2</p></th>
+    </tr>
+    <tr>
+      <th> <div class="box" style="background-color: rgb(249, 107, 12);"></div></th>
+      <th><p>Region 3</p></th>
+
+    </tr>
+   
+    <tr>
+      <th> <div class="box" style="background-color: rgb(12, 235, 228);"></div></th>
+      <th><p>Region 4</p></th>
+
+    </tr>
+    
+    <tr>
+      <th> <div class="box" style="background-color: rgb(235, 30, 146);"></div></th>
+      <th><p>Region 5</p></th>
+
+    </tr>
+      </table>
+        
+      </div>
+      
+      </div>
+      </div>
+   <script>
+    function sample() {
+      var m1 = {
+        center: new google.maps.LatLng(37, 275),
+        zoom: 4,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+         styles: [
+          {
+            featureType: "road",
+            elementType: "geometry",
+            stylers: [{ visibility: "off" }] // Turn off road visibility
+          },
+          {
+            featureType: "landscape",
+            elementType: "geometry",
+            stylers: [{ visibility: "off" }] // Turn off landscape visibility
+          },
+          {
+            featureType: "poi",
+            elementType: "labels",
+            stylers: [{ visibility: "off" }] // Turn off points of interest (POI) labels
+          },
+          {
+            featureType: "transit",
+            elementType: "labels",
+            stylers: [{ visibility: "off" }] // Turn off transit labels
+          }
+        ]
+      };
+
+      var universities = [
+        {
+          name: "Ball State University",
+          location: new google.maps.LatLng(40.2034, -85.4089)
+        },
+        {
+          name: "Eastern Illinois University",
+          location: new google.maps.LatLng(39.4801, -88.1759)
+        },
+        {
+          name: "Indiana University",
+          location: new google.maps.LatLng(39.1666, -86.5265)
+        },
+        {
+          name: "IUPUI",
+          location: new google.maps.LatLng(39.7729, -86.1752)
+        },
+        {
+          name: "Lakeland College",
+          location: new google.maps.LatLng(41.3625, -87.3451)
+        },
+        {
+          name: "Purdue University",
+          location: new google.maps.LatLng(40.4237, -86.9212),
+          
+        },
+        {
+          name: "St. Mary of the Woods College",
+          location: new google.maps.LatLng(39.5212, -87.4074)
+        },
+        {
+          name: "Taylor University",
+          location: new google.maps.LatLng(40.4527, -85.5023)
+        },
+        {
+          name: "University of Illinois Urbana-Champaign",
+          location: new google.maps.LatLng(40.1106, -88.2284),
+          icon: {
+    url: "/images/anchorr.png", 
+    scaledSize: new google.maps.Size(40, 40) 
+  }
+        },
+        {
+          name: "New Mexico State University",
+          location: new google.maps.LatLng(32.2824, -106.7465),
+          icon: {
+            url: "/images/green.png", 
+          }
+          
+        },
+        {
+          name: "North Central Texas College",
+          location: new google.maps.LatLng(33.2181, -97.1292),
+          icon: {
+            url: "/images/green.png", 
+          }
+        },
+        {
+          name: "Oklahoma Panhandle State University",
+          location: new google.maps.LatLng(36.4071, -101.7947),
+          icon: {
+            url: "/images/green.png", 
+          }
+        },
+        {
+          name: "Southern Nazarene University",
+          location: new google.maps.LatLng(35.5335, -97.6409),
+          icon: {
+            url: "/images/green.png", 
+          }
+        },
+        {
+          name: "Tarleton State University",
+          location: new google.maps.LatLng(32.2199, -98.2201),
+          icon: {
+            url: "/images/green.png", 
+          }
+        },
+        {
+          name: "Texas Tech University",
+          location: new google.maps.LatLng(33.5841, -101.8780),
+          icon: {
+            url: "/images/green.png", 
+          }
+        },
+        {
+          name: "University of North Texas",
+          location: new google.maps.LatLng(33.2148, -97.1331),
+          icon: {
+            url: "/images/green.png", 
+          }
+        },
+        {
+          name: "University of Oklahoma",
+          location: new google.maps.LatLng(35.2058, -97.4450),
+          icon: {
+            url: "/images/green.png", 
+          }
+        },
+        {
+          name: "West Texas A&M University",
+          location: new google.maps.LatLng(35.2031, -101.8749),
+          icon: {
+            url: "/images/marina.png", 
+          }
+        },
+        {
+          name: "Gustavus Adolphus College",
+          location: new google.maps.LatLng(44.3194, -93.9709),
+          icon: {
+            url: "/images/red.png", 
+          }
+        },
+        {
+          name: "Montana State University",
+          location: new google.maps.LatLng(45.6700, -111.0469),
+          icon: {
+            url: "/images/red.png", 
+          }
+        },
+        {
+          name: "North Dakota State University",
+          location: new google.maps.LatLng(46.8772, -96.7898),
+          icon: {
+            url: "/images/marina.png", 
+          }
+        },
+        {
+          name: "St. Cloud State University",
+          location: new google.maps.LatLng(45.5563, -94.1695),
+          icon: {
+            url: "/images/red.png", 
+          }
+        },
+        {
+          name: "University of Minnesota - Crookston",
+          location: new google.maps.LatLng(47.7716, -96.6136),
+          icon: {
+            url: "/images/red.png", 
+          }
+        },
+        {
+          name: "University of Minnesota - Twin Cities",
+          location: new google.maps.LatLng(44.9727, -93.2354),
+          icon: {
+            url: "/images/red.png", 
+          }
+        },
+        {
+          name: "University of Wisconsin - Eau Claire",
+          location: new google.maps.LatLng(44.7982, -91.4940),
+          icon: {
+            url: "/images/red.png", 
+          }
+        },
+        {
+          name: "University of Wisconsin - River Falls",
+          location: new google.maps.LatLng(44.8519, -92.6266),
+          icon: {
+            url: "/images/red.png", 
+          }
+        },
+        {
+          name: "Augustana College",
+          location: new google.maps.LatLng(43.5266, -96.7326),
+          icon: {
+            url: "/images/lightblue.png", 
+          }
+        },
+        {
+          name: "Iowa State University",
+          location: new google.maps.LatLng(42.0265, -93.6483),
+          icon: {
+            url: "/images/lightblue.png", 
+          }
+        },
+        {
+          name: "Marquette University",
+          location: new google.maps.LatLng(43.0389, -87.9288),
+          icon: {
+            url: "/images/lightblue.png", 
+          }
+        },
+        {
+          name: "Northwestern University",
+          location: new google.maps.LatLng(42.0555, -87.6750),
+          icon: {
+            url: "/images/lightblue.png", 
+          }
+        },
+        {
+          name: "Purdue University Northwest",
+          location: new google.maps.LatLng(41.5726, -87.4709),
+          icon: {
+            url: "/images/lightblue.png", 
+          }
+        },
+        {
+          name: "Ripon College",
+          location: new google.maps.LatLng(43.8456, -88.8431),
+          icon: {
+            url: "/images/lightblue.png", 
+          }
+        },
+        {
+          name: "University of Notre Dame",
+          location: new google.maps.LatLng(41.7039, -86.2386),
+          icon: {
+            url: "/images/lightblue.png", 
+          }
+        },
+        {
+          name: "University of Wisconsin-La Crosse",
+          location: new google.maps.LatLng(43.8126, -91.2304),
+          icon: {
+            url: "/images/marina.png", 
+          }
+        },
+        {
+          name: "University of Wisconsin-Madison",
+          location: new google.maps.LatLng(43.0731, -89.4012),
+          icon: {
+            url: "/images/lightblue.png", 
+          }
+        },
+        {
+          name: "Black Hawk College",
+          location: new google.maps.LatLng(41.4571, -90.6036),
+          icon: {
+            url: "/images/pink.png", 
+          }
+        },
+        {
+          name: "Illinois State University",
+          location: new google.maps.LatLng(40.5087, -88.9915),
+          icon: {
+            url: "/images/pink.png", 
+          }
+        },
+        {
+          name: "Kansas State University",
+          location: new google.maps.LatLng(39.1890, -96.5769),
+          icon: {
+            url: "/images/pink.png", 
+          }
+        },
+        {
+          name: "Missouri State University",
+          location: new google.maps.LatLng(37.1960, -93.2827),
+          icon: {
+            url: "/images/pink.png", 
+          }
+        },
+        {
+          name: "Northern Illinois University",
+          location: new google.maps.LatLng(41.9342, -88.7738),
+          icon: {
+            url: "/images/pink.png", 
+          }
+        },
+        {
+          name: "Northwest Missouri State University",
+          location: new google.maps.LatLng(40.3484, -94.8824),
+          icon: {
+            url: "/images/pink.png", 
+          }
+        },
+        {
+          name: "Saint Louis University",
+          location: new google.maps.LatLng(38.6358, -90.2343),
+          icon: {
+            url: "/images/marina.png", 
+          }
+        },
+        {
+          name: "Southeast Missouri State University",
+          location: new google.maps.LatLng(37.3133, -89.5369),
+          icon: {
+            url: "/images/pink.png", 
+          }
+        },
+        {
+          name: "Southern Illinois University - Carbondale",
+          location: new google.maps.LatLng(37.7157, -89.2224),
+          icon: {
+            url: "/images/pink.png", 
+          }
+        }
+      
+      ];
+
+      var map = new google.maps.Map(document.getElementById("m"), m1);
+
+      universities.forEach(function(university) {
+        var marker = new google.maps.Marker({
+          position: university.location,
+          map: map,
+          title: university.name,
+          icon: university.icon || "/images/yellow.png" // Replace with your custom marker image URL
+        });
+        var infoWindow = new google.maps.InfoWindow({
+          content: university.name
+        });
+
+        marker.addListener("mouseover", function() {
+          infoWindow.open(map, marker);
+        });
+
+        marker.addListener("mouseout", function() {
+          infoWindow.close();
+        });
+      });
+
+
+    }
+
+     
+  </script>
+  
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJXp97wm3VGOlHVqZSTzN2XoccrIe0ZHU&callback=sample"></script>
   
 
 </body>
