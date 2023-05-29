@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="ISHA.css">
+  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -164,12 +164,11 @@
     </div>
   </div>
   
-  <div class="container">
+ <div class="container">
     <div class="row">
       <div class="col-lg-12">
-  
         <div class="section-heading">
-          <button type="submit">Randomize</button>
+          <button type="submit" id="randomizeButton" onclick="randomizeHorseNames()">Randomize</button>
           <select>
             <option>None</option>
             <option>Level-I</option>
@@ -179,10 +178,14 @@
       </div>
     </div>
   </div>
-  
+
+	<br>
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
+      <div>
+      	<h5>Class 1</h5>
+      </div>
         <div class="table-responsive">
           <table>
             <tr>
@@ -200,8 +203,8 @@
               <td>760</td>
               <td>Josie Spratt</td>
               <td>Black Hawk College</td>
-              <td>Rey</td>
-              <td>UWP</td>
+              <td class="horse-name">-</td>
+              <td class="horse-provider">-</td>
             </tr>
             <tr>
               <td>-</td>
@@ -209,8 +212,8 @@
               <td>763</td>
               <td>Anna Wilhelm</td>
               <td>Black Hawk College</td>
-              <td>Sierra</td>
-              <td>BHC</td>
+              <td class="horse-name">-</td>
+              <td class="horse-provider">-</td>
             </tr>
             <tr>
               <td>-</td>
@@ -218,8 +221,8 @@
               <td>279</td>
               <td>Brayden Gruben</td>
               <td>Missouri State University</td>
-              <td>Henry</td>
-              <td>BHC</td>
+              <td class="horse-name">-</td>
+              <td class="horse-provider">-</td>
             </tr>
             <tr>
               <td>-</td>
@@ -227,8 +230,8 @@
               <td>795</td>
               <td>Morgan DeBuhr</td>
               <td>Iowa State University</td>
-              <td>Sierra</td>
-              <td>BHC</td>
+              <td class="horse-name">-</td>
+              <td class="horse-provider">-</td>
             </tr>
             <tr>
               <td>-</td>
@@ -236,23 +239,24 @@
               <td>754</td>
               <td>Lily Zomparelli</td>
               <td>Black Hawk College</td>
-              <td>Henry</td>
-              <td>BHC</td>
+              <td class="horse-name">-</td>
+              <td class="horse-provider">-</td>
             </tr>
           </table>
         </div>
       </div>
     </div>
   </div>
-  
+
   <br>
 
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
+      <h5>Class 2</h5>
         <div class="table-responsive">
           <table>
-            <tr>
+             <tr>
               <th>Placing</th>
               <th>Order</th>
               <th>Rider ID</th>
@@ -267,8 +271,8 @@
               <td>760</td>
               <td>Josie Spratt</td>
               <td>Black Hawk College</td>
-              <td>Rey</td>
-              <td>UWP</td>
+              <td class="horse-name-1">-</td>
+              <td class="horse-provider-1">-</td>
             </tr>
             <tr>
               <td>-</td>
@@ -276,8 +280,8 @@
               <td>763</td>
               <td>Anna Wilhelm</td>
               <td>Black Hawk College</td>
-              <td>Sierra</td>
-              <td>BHC</td>
+              <td class="horse-name-1">-</td>
+              <td class="horse-provider-1">-</td>
             </tr>
             <tr>
               <td>-</td>
@@ -285,8 +289,8 @@
               <td>279</td>
               <td>Brayden Gruben</td>
               <td>Missouri State University</td>
-              <td>Henry</td>
-              <td>BHC</td>
+              <td class="horse-name-1">-</td>
+              <td class="horse-provider-1">-</td>
             </tr>
             <tr>
               <td>-</td>
@@ -294,8 +298,8 @@
               <td>795</td>
               <td>Morgan DeBuhr</td>
               <td>Iowa State University</td>
-              <td>Sierra</td>
-              <td>BHC</td>
+              <td class="horse-name-1">-</td>
+              <td class="horse-provider-1">-</td>
             </tr>
             <tr>
               <td>-</td>
@@ -303,15 +307,86 @@
               <td>754</td>
               <td>Lily Zomparelli</td>
               <td>Black Hawk College</td>
-              <td>Henry</td>
-              <td>BHC</td>
+              <td class="horse-name-1">-</td>
+              <td class="horse-provider-1">-</td>
             </tr>
           </table>
         </div>
       </div>
     </div>
   </div>
-  
+
+  <script>
+ // document.getElementById("randomizeButton").addEventListener("click", randomizeHorseNames);
+
+  function randomizeHorseNames() {
+      // Get all elements with the "horse-name" class
+      var horseNameElements = document.getElementsByClassName("horse-name");
+      
+      var horseNameProviderElements = document.getElementsByClassName("horse-provider");
+
+      // Array of horse names
+      var class1horseNames = ["Rey", "Chip", "Dustin", "Sierra", "Henry"];
+      var class1horseProviders = ["UWP", "BHC"];
+      var assignedNames = [];
+      var ind=0;
+      // Iterate over the horse name elements and assign random names
+      for (var i = 0; i < horseNameElements.length; i++) {
+    	  
+        var randomIndex = Math.floor(Math.random() * class1horseNames.length);
+        while (assignedNames.includes(class1horseNames[randomIndex])) {
+        	randomIndex++;
+            if (randomIndex >= class1horseNames.length) {
+              randomIndex = 0;
+            }
+        }
+        horseNameElements[i].textContent = class1horseNames[randomIndex];
+        assignedNames.push(class1horseNames[randomIndex]);
+        if(ind==0){
+        	horseNameProviderElements[i].textContent = class1horseProviders[ind];
+        	ind++;
+        }else{
+        	horseNameProviderElements[i].textContent = class1horseProviders[ind];
+        	ind--;
+        }
+        
+        
+      }
+      
+      
+   // Get all elements with the "horse-name" class
+      var class2horseNameElements = document.getElementsByClassName("horse-name-1");
+      var horseNameProviderElements2 = document.getElementsByClassName("horse-provider-1");
+
+      // Array of horse names
+      var class2horseNames = ["Felix", "Fred", "Hooker", "Sanchez", "Sheldon"];
+      var class2horseProviders = ["UWP", "BHC"];
+      var assignedNames2 = [];
+      var ind1=0;
+
+      // Iterate over the horse name elements and assign random names
+      for (var i = 0; i < class2horseNameElements.length; i++) {
+        var randomIndex2 = Math.floor(Math.random() * class2horseNames.length);
+        while (assignedNames2.includes(class2horseNames[randomIndex2])) {
+        	randomIndex2++;
+            if (randomIndex2 >= class2horseNames.length) {
+              randomIndex2 = 0;
+            }
+        }
+        class2horseNameElements[i].textContent = class2horseNames[randomIndex2];
+        assignedNames2.push(class2horseNames[randomIndex2]);
+        
+        if(ind1==0){
+        	horseNameProviderElements2[i].textContent = class2horseProviders[ind1];
+        	ind1++;
+        }else{
+        	horseNameProviderElements2[i].textContent = class2horseProviders[ind1];
+        	ind1--;
+        }
+      }
+    }
+  </script>
+
 
 </body>
 
