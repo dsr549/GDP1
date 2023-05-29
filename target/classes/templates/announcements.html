@@ -2,15 +2,10 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="TemplateMo">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
-  <title>IHSA</title>
-
-  <!-- Bootstrap core CSS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Announcements</title>
+   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Additional CSS Files -->
@@ -18,19 +13,17 @@
   <link rel="stylesheet" href="/css/templatemo-edu-meeting.css">
   <link rel="stylesheet" href="/css/owl.css">
   <link rel="stylesheet" href="/css/lightbox.css">
-
-  <!-- Custom Styles -->
   <style>
-    /* Custom section for announcements */
+    /* Custom styling for announcements */
     .announcements {
-      margin-top: 40px;
+      margin-top: 0px;
     }
 
     .announcement-item {
-      margin-bottom: 30px;
+      margin-bottom: 5px;
       margin-left: 20px;
       margin-right: 20px;
-      padding-bottom: 20px;
+      padding-bottom: 5px;
       border-bottom: 1px solid #e9ecef;
     }
 
@@ -38,7 +31,7 @@
       margin-bottom: 10px;
       font-size: 20px;
     }
-
+	
     .announcement-content p {
       margin-bottom: 0;
     }
@@ -50,7 +43,7 @@
       color: #888;
     }
 
-    /* Custom buttons */
+    /* Custom styling for buttons */
     .announcement-buttons {
       display: flex;
       justify-content: flex-end;
@@ -60,13 +53,7 @@
     .announcement-buttons button {
       margin-left: 10px;
     }
-
-    /* Custom styling for nav */
-    .main-nav {
-      background-color: rgba(7, 7, 7, 0.15);
-    }
-
-    .announcement-header-area {
+     .announcement-header-area {
       background-color: rgba(7, 7, 7, 0.15);
       position: relative;
       left: 0;
@@ -77,16 +64,57 @@
       -o-transition: all .5s ease 0s;
       transition: all .5s ease 0s;
     }
+    .edit-btn{
+    color: #fff;
+    width:80px;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+    .delete-btn{
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+    #description{
+    width:300px;
+    height:80px;
+    }
+    
   </style>
 </head>
 
 <body>
-
-  <!-- Sub Header -->
-
-
-  <!-- ***** Header Area Start ***** -->
-  <header class="announcement-header-area">
+ <header class="announcement-header-area">
     <div class="sub-header">
       <div class="container">
         <div class="row">
@@ -114,13 +142,13 @@
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
               <li class="scroll-to-section"><a href="home">Home</a></li>
-              <li><a href="announcements" class="active">Announcements</a></li>
+              <li><a href="announcements.html" class="active">Announcements</a></li>
               <li class="scroll-to-section"><a href="details">Horse/Rider Info</a></li>
               <li class="scroll-to-section"><a href="maps">Maps</a></li>
               <li class="has-sub">
                 <a href="javascript:void(0)">Menu</a>
                 <ul class="sub-menu">
-                  <li><a href="login">Login</a></li>
+                  <li><a href="loginl">Login</a></li>
                   <li><a href="signup">Sign up</a></li>
                 </ul>
               </li>
@@ -146,56 +174,138 @@
     </div>
   </div>
 </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="text-center mt-4">
-              <button id="addAnnouncementBtn" class="btn btn-primary">Add New Announcement</button>
-            </div>
-          </div>
+  <div class="container">
+    <div class="announcements">
+      <div class="announcement-item">
+        <div class="announcement-content">
+          <h3>Announcement Title 1</h3>
+           <p>Join us for an exciting jumping competition at our equestrian center! Participants will showcase 
+             their skills in a variety of challenging jumps and courses. Don't miss this thrilling event!</p>
+        </div>
+        <div class="announcement-date">May 24, 2023</div>
+        <div class="announcement-buttons">
+          <button class="edit-btn">Edit</button>
+          <button class="delete-btn" >Delete</button>
         </div>
       </div>
-      <!-- Announcement Item 1 -->
-      <div class="row announcement-item">
-        <div class="col-lg-8">
-          <div class="announcement-content">
-            <h3>Announcement Title</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed ullamcorper dolor, non varius mauris.
-              Quisque a malesuada lectus. Curabitur eget massa fringilla, lacinia risus eget, suscipit lacus.</p>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="announcement-date">May 24, 2023</div>
-          <div class="announcement-buttons">
-            <button class="btn btn-primary">Edit Announcement</button>
-            <button class="btn btn-danger">Delete Announcement</button>
-          </div>
-        </div>
-      </div>
+      <div class="announcement-item">
+        <div class="announcement-content">
+          <h3>Announcement Title 2</h3>
+         <p>Due to unforeseen circumstances, the dressage clinic originally scheduled for June 15th has been rescheduled to June 20th. We apologize for any inconvenience caused and appreciate your understanding.</p>
 
-      <!-- Announcement Item 2 -->
-      <div class="row announcement-item">
-        <div class="col-lg-8">
-          <div class="announcement-content">
-            <h3>Announcement Title</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed ullamcorper dolor, non varius mauris.
-              Quisque a malesuada lectus. Curabitur eget massa fringilla, lacinia risus eget, suscipit lacus.</p>
-          </div>
         </div>
-        <div class="col-lg-4">
-          <div class="announcement-date">May 23, 2023</div>
-          <div class="announcement-buttons">
-            <button class="btn btn-primary">Edit Announcement</button>
-            <button class="btn btn-danger">Delete Announcement</button>
-          </div>
+        <div class="announcement-date">May 23, 2023</div>
+        <div class="announcement-buttons">
+          <button class="edit-btn" >Edit</button>
+          <button class="delete-btn" >Delete</button>
         </div>
       </div>
     </div>
-  </section>
-  <!-- ***** Announcements Section End ***** -->
- 
+    <div>
+      <h3>Add New Announcement</h3>
+      <br>
+      <form id="addForm">
+      <div>
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" required>
+        </div>
+        <br>
+        <div>
+        <label for="description">Description:</label><br>
+        <textarea id="description" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success" style="height:40px;width:100px">Add</button>
+      </form>
+    </div>
+  </div>
+  <br><br><br>
 
-  <!-- Scripts -->
+  <script>
+    var announcementList = document.querySelector('.announcements');
+    var addForm = document.getElementById('addForm');
+
+    // Add event listeners for the edit and delete buttons
+    announcementList.addEventListener('click', function(event) {
+      var target = event.target;
+      if (target.classList.contains('edit-btn')) {
+        editAnnouncement(target.closest('.announcement-item'));
+      } else if (target.classList.contains('delete-btn')) {
+        deleteAnnouncement(target.closest('.announcement-item'));
+      }
+    });
+
+    // Add event listener for the form submission
+    addForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      addAnnouncement();
+      addForm.reset();
+    });
+
+    // Function to add a new announcement
+    function addAnnouncement() {
+      var title = document.getElementById('title').value;
+      var description = document.getElementById('description').value;
+
+      var announcementItem = document.createElement('div');
+      announcementItem.classList.add('announcement-item');
+
+      var announcementContent = document.createElement('div');
+      announcementContent.classList.add('announcement-content');
+
+      var announcementTitle = document.createElement('h3');
+      announcementTitle.textContent = title;
+
+      var announcementDescription = document.createElement('p');
+      announcementDescription.textContent = description;
+
+      announcementContent.appendChild(announcementTitle);
+      announcementContent.appendChild(announcementDescription);
+
+      var announcementDate = document.createElement('div');
+      announcementDate.classList.add('announcement-date');
+      var currentDate = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+      announcementDate.textContent = currentDate;
+
+      var announcementButtons = document.createElement('div');
+      announcementButtons.classList.add('announcement-buttons');
+
+      var editButton = document.createElement('button');
+      editButton.classList.add('edit-btn');
+      editButton.textContent = 'Edit';
+
+      var deleteButton = document.createElement('button');
+      deleteButton.classList.add('delete-btn');
+      deleteButton.textContent = 'Delete';
+
+      announcementButtons.appendChild(editButton);
+      announcementButtons.appendChild(deleteButton);
+
+      announcementItem.appendChild(announcementContent);
+      announcementItem.appendChild(announcementDate);
+      announcementItem.appendChild(announcementButtons);
+
+      announcementList.appendChild(announcementItem);
+    }
+
+    // Function to delete an announcement
+    function deleteAnnouncement(announcementItem) {
+      announcementItem.remove();
+    }
+
+    // Function to edit an announcement
+    function editAnnouncement(announcementItem) {
+      var announcementContent = announcementItem.querySelector('.announcement-content');
+      var announcementTitle = announcementContent.querySelector('h3');
+      var announcementDescription = announcementContent.querySelector('p');
+
+      var newTitle = prompt('Enter the new title:', announcementTitle.textContent);
+      var newDescription = prompt('Enter the new description:', announcementDescription.textContent);
+
+      announcementTitle.textContent = newTitle;
+      announcementDescription.textContent = newDescription;
+    }
+  </script>
+    <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
   <script src="/js/owl-carousel.js"></script>
