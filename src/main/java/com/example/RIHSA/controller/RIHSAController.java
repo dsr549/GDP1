@@ -41,5 +41,10 @@ public class RIHSAController {
 	public String goToSignUp() {
 		return "Signup.html";
 	}
+	
+	@RequestMapping("circulars")
+	public String goToCirculars() {
+		return "circulars.html";
+	}
 
 }

@@ -131,7 +131,7 @@
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
               <li class="scroll-to-section"><a href="home">Home</a></li>
-              <li><a href="announcements" >Announcements</a></li>
+              <li><a href="circulars" >Announcements</a></li>
               <li class="scroll-to-section"><a href="details" class="active">Horse/Rider Info</a></li>
               <li class="scroll-to-section"><a href="maps">Maps</a></li>
               <li class="has-sub">
@@ -327,9 +327,30 @@
 
       // Array of horse names
       var class1horseNames = ["Rey", "Chip", "Dustin", "Sierra", "Henry"];
-      var class1horseProviders = ["UWP", "BHC"];
+      var horse1 = {
+    		  horseName:"Rey",
+    		  horseProvider:"UWP"
+      };
+      var horse2 = {
+    		  horseName:"Chip",
+    		  horseProvider:"BHC"
+      };
+      var horse3 = {
+    		  horseName:"Dustin",
+    		  horseProvider:"UWP"
+      };
+      var horse4 = {
+    		  horseName:"Sierra",
+    		  horseProvider:"BHC"
+      };
+      var horse5 = {
+    		  horseName:"Henry",
+    		  horseProvider:"UWP"
+      };
+      var horses=[horse1,horse2,horse3,horse4,horse5];
+      
       var assignedNames = [];
-      var ind=0;
+      
       // Iterate over the horse name elements and assign random names
       for (var i = 0; i < horseNameElements.length; i++) {
     	  
@@ -341,14 +362,19 @@
             }
         }
         horseNameElements[i].textContent = class1horseNames[randomIndex];
+        
         assignedNames.push(class1horseNames[randomIndex]);
-        if(ind==0){
-        	horseNameProviderElements[i].textContent = class1horseProviders[ind];
-        	ind++;
-        }else{
-        	horseNameProviderElements[i].textContent = class1horseProviders[ind];
-        	ind--;
-        }
+        
+        
+        
+        for (let j = 0; j < horses.length; j++) {
+        	 
+        	  if(class1horseNames[randomIndex] == horses[j].horseName){
+        		 
+        		  horseNameProviderElements[i].textContent = horses[j].horseProvider;
+        	  }
+        	}
+      
         
         
       }
@@ -360,7 +386,28 @@
 
       // Array of horse names
       var class2horseNames = ["Felix", "Fred", "Hooker", "Sanchez", "Sheldon"];
-      var class2horseProviders = ["UWP", "BHC"];
+      var horse6 = {
+    		  horseName:"Felix",
+    		  horseProvider:"UWP"
+      };
+      var horse7 = {
+    		  horseName:"Fred",
+    		  horseProvider:"BHC"
+      };
+      var horse8 = {
+    		  horseName:"Hooker",
+    		  horseProvider:"UWP"
+      };
+      var horse9 = {
+    		  horseName:"Sanchez",
+    		  horseProvider:"BHC"
+      };
+      var horse10 = {
+    		  horseName:"Sheldon",
+    		  horseProvider:"BHC"
+      };
+      
+      var horses1=[horse6,horse7,horse8,horse9,horse10];
       var assignedNames2 = [];
       var ind1=0;
 
@@ -376,13 +423,15 @@
         class2horseNameElements[i].textContent = class2horseNames[randomIndex2];
         assignedNames2.push(class2horseNames[randomIndex2]);
         
-        if(ind1==0){
-        	horseNameProviderElements2[i].textContent = class2horseProviders[ind1];
-        	ind1++;
-        }else{
-        	horseNameProviderElements2[i].textContent = class2horseProviders[ind1];
-        	ind1--;
-        }
+        
+        for (let k = 0; k < horses.length; k++) {
+       	 
+      	  if(class2horseNames[randomIndex2] == horses1[k].horseName){
+      		 
+      		horseNameProviderElements2[i].textContent = horses1[k].horseProvider;
+      	  }
+      	}
+       
       }
     }
   </script>
