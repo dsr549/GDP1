@@ -96,6 +96,10 @@
     th {
       background-color: #f2f2f2;
     }
+    
+    #classSelect{
+    	right: 200;
+    }
   </style>
 
 </head>
@@ -169,11 +173,12 @@
       <div class="col-lg-12">
         <div class="section-heading">
           <button type="submit" id="randomizeButton" onclick="randomizeHorseNames()">Randomize</button>
-          <select>
-            <option>None</option>
-            <option>Level-I</option>
-            <option>Level-II</option>
+          <select id="classSelect" onchange="toggleTables()">
+            <option value="all">All Classes</option>
+            <option value="class1">Class 1</option>
+            <option value="class2">Class 2</option>
           </select>
+          </div>
         </div>
       </div>
     </div>
@@ -181,7 +186,7 @@
 
 	<br>
   <div class="container">
-    <div class="row">
+    <div class="row class1">
       <div class="col-lg-12">
       <div>
       	<h5>Class 1</h5>
@@ -251,7 +256,7 @@
   <br>
 
   <div class="container">
-    <div class="row">
+    <div class="row class2">
       <div class="col-lg-12">
       <h5>Class 2</h5>
         <div class="table-responsive">
@@ -432,6 +437,25 @@
       	  }
       	}
        
+      }
+    }
+  function toggleTables() {
+      var classSelect = document.getElementById("classSelect");
+      var class1Table = document.querySelector(".class1");
+      var class2Table = document.querySelector(".class2");
+
+      if (classSelect.value === "all") {
+          class1Table.style.display = "block";
+          class2Table.style.display = "block";
+        }else if (classSelect.value === "class1") {
+        class1Table.style.display = "block";
+        class2Table.style.display = "none";
+      } else if (classSelect.value === "class2") {
+        class1Table.style.display = "none";
+        class2Table.style.display = "block";
+      } else {
+        class1Table.style.display = "none";
+        class2Table.style.display = "none";
       }
     }
   </script>
